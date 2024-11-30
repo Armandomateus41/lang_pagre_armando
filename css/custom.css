@@ -1,0 +1,196 @@
+/* Estilo para o corpo */
+body {
+    display: flex;
+    flex-direction: column; /* Define um layout em coluna */
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+    background: #1a1a2e;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o logo e cabeçalho */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Estilo para a navegação */
+.nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    margin-right: 20px;
+}
+
+.nav ul li:last-child {
+    margin-right: 0;
+}
+
+.nav ul li a {
+    color: #a8a8a8;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #fff;
+}
+
+main {
+    flex: 1; /* Faz com que o main ocupe o espaço disponível */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Conteúdo principal */
+.content {
+    width: 50%;
+}
+
+.content h1 {
+    font-size: 40px;
+}
+
+.content h1 span {
+    color: #2b7ad1;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    padding: 15px;
+    background-color: #2e2e3a;
+    color: #fff;
+    border-radius: 30px;
+    border: 2px solid #333;
+    width: 70%;
+}
+
+.form-group button {
+    padding: 15px 40px;
+    background-color: #2b7ad1;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #2962ff;
+}
+
+/* Contêiner da imagem e do círculo */
+.image-container {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para o círculo */
+.ellipse {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2962ff, transparent);
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+/* Estilo para a imagem */
+.image-container img {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background: #2e2e3a;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .ellipse {
+        width: 200px;
+        height: 200px;
+        left: 0;
+    }
+}
